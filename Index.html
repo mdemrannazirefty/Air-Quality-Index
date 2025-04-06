@@ -6,79 +6,70 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Air Quality Index</title>
     <link rel="stylesheet" href="style.css">
-
-    <style>
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
-
-        div.Logo-text {
-            text-align: center;
-        }
-
-
-        div.allbook {
-            width: 100%;
-            overflow: auto;
-        }
-
-        div.allbook {
-            /* display: flex; */
-            text-align: center;
-        }
-    </style>
+    <script src="code.js" defer></script>
 </head>
 
-<body>
+<body style="text-align: center;">
     <div class="Logo-text">
-        <img src="Logo.jpg" alt="#" width="150px">
-        <h1>Air Quality Index</h1>
+        <img src="Logo.jpg" alt="Logo" width="150px">
+        <h1 style="color: rgb(255, 0, 0);">Air Quality Index Application</h1>
     </div>
-    <div class="allbook">
-        <div class="book1and2">
-            <div class="book1" style="background-color: aquamarine;height: 100px;width: 50%;">Book 1</div>
-            <div class="book2" style="background-color: rgb(112, 148, 255);height: 500px;width: 50%;">
-                <h3 class="text-center">Registation</h3>
 
-                <form action="registation">
-                    <label for="fname">First name :</label> 
-                <input type="text" id="regFullname" class="" placeholder="Full Name"><br>
-                <label for="femail">Your Email :</label>
-                <input type="email" id="regEmail" class="" placeholder="Email"><br>
-                <label for="fpass">Password :</label>
-                <input type="password" id="regPassword" class="" placeholder="Password"><br>
-                <label for="fpassc">Confirm Password :</label>
-                <input type="password" id="regcPassword" class="" placeholder="Confirm Password"><br>
-                <label for="floc">Enter Your Location :</label>
-                <input type="text" id="Location" class="" placeholder="Enter Location"><br>
-                <label for="fzip">Enter Your Zip:</label>
-                <input type="text" id="Zip" class="" placeholder="Your zip"><br>
-                <label for="loctext">list of prefired city:</label>
+    <div style="display: flex; justify-content: center; margin-top: 20px;">
+        <div style="width: 400px; height: 600px; border: 1px solid black; display: flex; flex-direction: column;">
+            <div style="height: 300px; border-bottom: 1px solid black;">
+                </div>
+            <div style="height: 300px;">
+                </div>
+        </div>
 
-                <select name="LOPcity" id="LOPcity">
-                    <option value="Dhaka">Dhaka</option>
-                    <option value="Khulna">Khulna</option>
-                    <option value="Sylhet">Sylhet</option>
-                    <option value="comilla">Comilla</option>
-                    </select>
+        <div style="width: 400px; height: 600px; border: 1px solid black; display: flex; flex-direction: column;">
+            <div>
+                <h2 style="color: rgb(56, 91, 126);">Registration Box</h2>
+            </div>
+
+            <div style="padding: 10px;">
+                <form>
+                    <label for="regFullname">First name :</label>
+                    <input type="text" id="regFullname" placeholder="Full Name"><br><br>
+
+                    <label for="regEmail">Your Email :</label>
+                    <input type="email" id="regEmail" placeholder="Email"><br><br>
+
+                    <label for="regPassword">Password :</label>
+                    <input type="password" id="regPassword" placeholder="Password"><br><br>
+
+                    <label for="regcPassword">Confirm Password :</label>
+                    <input type="password" id="regcPassword" placeholder="Confirm Password"><br><br>
+
+                    <label for="Location">Enter Your Location :</label>
+                    <input type="text" id="Location" placeholder="Enter Location"><br><br>
+
+                    <label for="Zip">Enter Your Zip:</label>
+                    <input type="text" id="Zip" placeholder="Your Zip"><br><br>
+
+                    <label for="LOPcity">List of preferred city:</label>
+                    <select name="LOPcity" id="LOPcity">
+                        <option value="Dhaka">Dhaka</option>
+                        <option value="Khulna">Khulna</option>
+                        <option value="Sylhet">Sylhet</option>
+                        <option value="Comilla">Comilla</option>
+                    </select><br><br>
+
                     <div class="tacbox">
                         <input id="checkbox" type="checkbox" />
                         <label for="checkbox"> I agree to these <a href="#">Terms and Conditions</a>.</label>
-                    </div>
-                    <button>Confirm</button>
+                    </div><br>
+
+                    <button type="submit">Confirm</button>
                 </form>
-                    </div>
-                    
-                    </div>
-                    <div class="book3and4">
-                        <div class="book3" style="background-color: rgb(248, 255, 106);height: 50px;width: 50%;">Book 3</div>
-                        <div class="book4" style="background-color: rgb(255, 83, 158);height: 30px;width: 50%;">Book 4</div>
+            </div>
+
+            <div style="height: 100px; border-top: 1px solid black;">
+                </div>
+
         </div>
-
     </div>
-
 </body>
 
 </html>

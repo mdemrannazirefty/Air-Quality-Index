@@ -11,4 +11,3 @@ zip code
 dropdown menu list of prefired city
 trams of condition
 submit button
-
