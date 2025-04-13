@@ -20,12 +20,12 @@ document.addEventListener('DOMContentLoaded', () => {
             isValid = false;
         }
 
-        const passwordRegex = /^\d{2}-\d{5}-\d@student\.aiub\.edu$/;
+        const emailRegex = /^\d{2}-\d{5}-\d@student\.aiub\.edu$/;
         if (!password) {
             alert('Please enter a password.');
             isValid = false;
-        } else if (!passwordRegex.test(password)) {
-            alert('Password must follow this format: YY-XXXXX-Z@student.aiub.edu');
+        } else if (!emailRegex.test(email)) {
+            alert('Email must follow this format: YY-XXXXX-Z@student.aiub.edu');
             isValid = false;
         }
 
@@ -36,7 +36,6 @@ document.addEventListener('DOMContentLoaded', () => {
             alert('Password must be at least 8 characters long.');
             isValid = false;
         }
-
         if (!confirmPassword) {
             alert('Please confirm your password.');
             isValid = false;
