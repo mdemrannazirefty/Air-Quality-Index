@@ -21,8 +21,8 @@ document.addEventListener('DOMContentLoaded', () => {
         }
 
         const emailRegex = /^\d{2}-\d{5}-\d@student\.aiub\.edu$/;
-        if (!password) {
-            alert('Please enter a password.');
+        if (!email) {
+            alert('Please enter an email.');
             isValid = false;
         } else if (!emailRegex.test(email)) {
             alert('Email must follow this format: YY-XXXXX-Z@student.aiub.edu');
@@ -36,6 +36,7 @@ document.addEventListener('DOMContentLoaded', () => {
             alert('Password must be at least 8 characters long.');
             isValid = false;
         }
+
         if (!confirmPassword) {
             alert('Please confirm your password.');
             isValid = false;
@@ -43,31 +44,39 @@ document.addEventListener('DOMContentLoaded', () => {
             alert('Passwords do not match.');
             isValid = false;
         }
+
         if (!location) {
             alert('Please enter your location.');
             isValid = false;
         }
+
+        const zipRegex = /^\d{4}$/;
         if (!zip) {
-            alert('Please enter your valid zip code.');
+            alert('Please enter your zip code.');
             isValid = false;
-        } else if (zip.length < 4) {
-            alert('Zip must be 4 characters long.');
+        } else if (!zipRegex.test(zip)) {
+            alert('Zip code must be exactly 4 digits.');
             isValid = false;
         }
+
+   
         if (!checkbox) {
             alert('Please agree to the Terms and Conditions.');
             isValid = false;
         }
+
         if (!isValid) {
             return;
         }
+
         console.log('Full Name:', fullName);
         console.log('Email:', email);
         console.log('Location:', location);
         console.log('Zip:', zip);
         console.log('Preferred City:', preferredCity);
         console.log('Terms Agreed:', checkbox);
-        alert("Registration Successful!");
+        
+        alert('Registration Successful!');
         form.reset();
     });
 });

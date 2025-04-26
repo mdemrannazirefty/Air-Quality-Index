@@ -9,38 +9,34 @@
     <script src="code.js" defer></script>
 </head>
 
-<body style="text-align: center;">
+<body>
     <div class="Logo-text">
-        <img src="Logo.jpg" alt="Logo" width="150px">
-        <h1 style="color: rgb(61, 135, 255);">Air Quality Index Application</h1>
+        <img src="images/Logo.jpg" alt="Logo" width="150px">
+        <h1>Air Quality Index Application</h1>
     </div>
+    <div class="parent">
+        <div class="box1">1</div>
+        <div class="box2">2</div>
 
-    <div style="display: flex; justify-content: center; margin-top: 20px;">
-        <div style="width: 400px; height: 600px; border: 1px solid black; display: flex; flex-direction: column;">
-            <div style="height: 300px; border-bottom: 1px solid black;">
-                </div>
-            <div style="height: 300px;">
-                </div>
-        </div>
-
-        <div style="width: 400px; height: 600px; border: 1px solid black; display: flex; flex-direction: column;">
+        <!-- Registation part -->
+        <div class="box3">
             <div>
-                <h2 style="color: rgb(55, 118, 181);">Registration Box</h2>
+                <h2>Registration Box</h2>
             </div>
 
             <div style="padding: 10px;">
                 <form>
                     <label for="regFullname">First name :</label>
-                    <input type="text" id="regFullname" placeholder="Full Name"><br><br>
+                    <input type="text" id="regFullname" placeholder="Enter Full Name"><br><br>
 
                     <label for="regEmail">Your Email :</label>
-                    <input type="email" id="regEmail" placeholder="Email"><br><br>
+                    <input type="email" id="regEmail" placeholder="Enter Your Email"><br><br>
 
                     <label for="regPassword">Password :</label>
-                    <input type="password" id="regPassword" placeholder="Password"><br><br>
+                    <input type="password" id="regPassword" placeholder="Enter Password"><br><br>
 
                     <label for="regcPassword">Confirm Password :</label>
-                    <input type="password" id="regcPassword" placeholder="Confirm Password"><br><br>
+                    <input type="password" id="regcPassword" placeholder="Enter Confirm Password"><br><br>
 
                     <label for="Location">Enter Your Location :</label>
                     <input type="text" id="Location" placeholder="Enter Location"><br><br>
@@ -57,18 +53,15 @@
                     </select><br><br>
 
                     <div class="tacbox">
-                        <input id="checkbox" type="checkbox" />
-                        <label for="checkbox"> I agree to these <a href="#">Terms and Conditions</a>.</label>
-                    </div><br>
+                        <input id="checkbox" type="checkbox">
+                        <label for="checkbox">I agree to these <a href="#">Terms and Conditions</a>.</label>
+                    </div>
 
                     <button type="submit">Confirm</button>
                 </form>
             </div>
-
-            <div style="height: 100px;border-top: 1px solid black;">
-                </div>
-
         </div>
+        <div class="box4">4</div>
     </div>
 </body>
 
