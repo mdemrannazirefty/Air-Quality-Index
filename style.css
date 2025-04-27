@@ -1,79 +1,121 @@
-* {
+body {
+    text-align: center;
     font-family: Arial, Helvetica, sans-serif;
-}
-
-.Logo-text {
-    text-align: center;
-    padding-bottom: 20px;
-}
-
-h1 {
+  }
+  
+  .Logo-text img {
+    margin-top: 20px;
+  }
+  
+  .Logo-text h1 {
     color: rgb(55, 118, 181);
-}
-
-h2 {
+  }
+  
+  .main-container {
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+  }
+  
+  .box-container {
+    width: 850px;
+    height: 600px;
+    display: flex;
+    padding: 0 20px;
+  }
+  
+  .left-box {
+    width: 400px;
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .box1, .box2 {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .box1 {
+    background-color: rgb(254, 186, 255);
+  }
+  
+  .box2 {
+    background-color: rgb(192, 231, 255);
+  }
+  
+  .right-box {
+    width: 400px;
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .registration-box {
+    height: 400px;
+    background-color: rgb(226, 255, 140);
+    padding: 10px;
+  }
+  
+  .registration-box h2 {
+    color: black;
+    margin: 0;
     text-align: center;
-    color: rgb(55, 118, 181);
-}
-
-label {
+  }
+  
+  #registrationForm {
     text-align: left;
+    margin-top: 10px;
+  }
+  
+  .form-row {
+    display: flex;
+    align-items: center;
+    margin-bottom: 8px;
+  }
+  
+  .form-row label {
+    width: 150px;
     font-weight: bold;
-    margin-left: 20px;
-}
-
-input, select {
-    width: 50%;
-    margin: 0 auto 15px auto;
-    border: 1px solid #ccc;
-    border-radius: 5px;
-    padding: 4px;
-}
-
-button {
-    display: block;
-    margin: 20px auto 0 auto;
-    padding: 10px 20px;
-    background-color: rgb(55, 118, 181);
-    color: white;
-    font-size: 12px;
+    font-size: 14px;
+  }
+  
+  .form-row input,
+  .form-row select {
+    width: 180px;
+    padding: 4px 6px;
+    font-size: 14px;
+  }
+  
+  .checkbox-row {
+    display: flex;
+    align-items: center;
+  }
+  
+  .checkbox-label {
+    margin-left: 5px;
+    font-size: 13px;
+  }
+  
+  .button-row {
+    display: flex;
+    justify-content: center; 
+    margin-top: 10px;
+  }
+  
+  .button-row button {
+    background-color: rgb(254, 255, 255);
     border: none;
+    padding: 8px 16px;
+    font-size: 16px;
     border-radius: 5px;
     cursor: pointer;
-    font-weight: bold;
-}
-
-.parent {
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    grid-template-rows: repeat(10, 1fr);
-    gap: 0px;
-}
-
-.box1 {
-    grid-row: span 6 / span 6;
-    background-color: rgb(255, 180, 180);
-}
-
-.box2 {
-    grid-row: span 4 / span 4;
-    grid-column-start: 1;
-    grid-row-start: 7;
-    background-color: rgb(181, 255, 212);
-}
-
-.box3 {
-    grid-row: span 7 / span 7;
-    grid-column-start: 2;
-    grid-row-start: 1;
-    background-color: rgb(255, 246, 207);
-    padding: 20px;
-    text-align: left;
-}
-
-.box4 {
-    grid-row: span 3 / span 3;
-    grid-column-start: 2;
-    grid-row-start: 8;
-    background-color: rgb(255, 208, 245);
-}
+  }
+  
+  .bottom-box {
+    flex: 1;
+    background-color: lightgoldenrodyellow;
+    padding: 10px;
+    overflow-y: auto;
+  }
+  

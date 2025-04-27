@@ -1,82 +1,81 @@
-document.addEventListener('DOMContentLoaded', () => {
-    const form = document.querySelector('form');
-
-    form.addEventListener('submit', (event) => {
-        event.preventDefault();
-
-        const fullName = document.getElementById('regFullname').value.trim();
-        const email = document.getElementById('regEmail').value.trim();
-        const password = document.getElementById('regPassword').value.trim();
-        const confirmPassword = document.getElementById('regcPassword').value.trim();
-        const location = document.getElementById('Location').value.trim();
-        const zip = document.getElementById('Zip').value.trim();
-        const preferredCity = document.getElementById('LOPcity').value;
-        const checkbox = document.getElementById('checkbox').checked;
-
-        let isValid = true;
-
-        if (!fullName) {
-            alert('Please enter your full name.');
-            isValid = false;
-        }
-
-        const emailRegex = /^\d{2}-\d{5}-\d@student\.aiub\.edu$/;
-        if (!email) {
-            alert('Please enter an email.');
-            isValid = false;
-        } else if (!emailRegex.test(email)) {
-            alert('Email must follow this format: YY-XXXXX-Z@student.aiub.edu');
-            isValid = false;
-        }
-
-        if (!password) {
-            alert('Please enter a password.');
-            isValid = false;
-        } else if (password.length < 8) {
-            alert('Password must be at least 8 characters long.');
-            isValid = false;
-        }
-
-        if (!confirmPassword) {
-            alert('Please confirm your password.');
-            isValid = false;
-        } else if (password !== confirmPassword) {
-            alert('Passwords do not match.');
-            isValid = false;
-        }
-
-        if (!location) {
-            alert('Please enter your location.');
-            isValid = false;
-        }
-
-        const zipRegex = /^\d{4}$/;
-        if (!zip) {
-            alert('Please enter your zip code.');
-            isValid = false;
-        } else if (!zipRegex.test(zip)) {
-            alert('Zip code must be exactly 4 digits.');
-            isValid = false;
-        }
-
-   
-        if (!checkbox) {
-            alert('Please agree to the Terms and Conditions.');
-            isValid = false;
-        }
-
-        if (!isValid) {
-            return;
-        }
-
-        console.log('Full Name:', fullName);
-        console.log('Email:', email);
-        console.log('Location:', location);
-        console.log('Zip:', zip);
-        console.log('Preferred City:', preferredCity);
-        console.log('Terms Agreed:', checkbox);
-        
-        alert('Registration Successful!');
-        form.reset();
-    });
-});
+document.getElementById("registrationForm").addEventListener("submit", function (e) {
+    e.preventDefault();
+  
+    let isValid = true;
+  
+    const name = document.getElementById("regFullname").value.trim();
+    const email = document.getElementById("regEmail").value.trim();
+    const password = document.getElementById("regPassword").value;
+    const cPassword = document.getElementById("regcPassword").value;
+    const location = document.getElementById("Location").value.trim();
+    const zip = document.getElementById("Zip").value.trim();
+    const city = document.getElementById("LOPcity").value;
+    const termsChecked = document.getElementById("checkbox").checked;
+  
+    const nameRegex = /^[A-Za-z\s]+$/;
+    const emailRegex = /^\d{2}-\d{5}-\d@student\.aiub\.edu$/;
+    const zipRegex = /^\d{4}$/;
+  
+    if (!name || !email || !password || !cPassword || !location || !zip || !city) {
+      alert("All fields must be filled.");
+      return;
+    }
+  
+    if (!nameRegex.test(name)) {
+      alert("Name should not contain special characters or numbers.");
+      return;
+    }
+  
+    if (!email) {
+      alert('Please enter an email.');
+      isValid = false;
+    } else if (!emailRegex.test(email)) {
+      alert('Email must follow this format: YY-XXXXX-Z@student.aiub.edu');
+      isValid = false;
+    }
+  
+    if (!password) {
+      alert('Please enter a password.');
+      isValid = false;
+    } else if (password.length < 8) {
+      alert('Password must be at least 8 characters long.');
+      isValid = false;
+    }
+  
+    if (!cPassword) {
+      alert('Please confirm your password.');
+      isValid = false;
+    } else if (password !== cPassword) {
+      alert('Passwords do not match.');
+      isValid = false;
+    }
+  
+    if (!zipRegex.test(zip)) {
+      alert("Zip code must be exactly 4 digits.");
+      return;
+    }
+  
+    if (!termsChecked) {
+      alert("You must agree to the Terms and Conditions.");
+      return;
+    }
+  
+    if (!isValid) {
+      return;
+    }
+  
+    console.log('Full Name:', name);
+    console.log('Email:', email);
+    console.log('Location:', location);
+    console.log('Zip:', zip);
+    console.log('Preferred City:', city);
+    console.log('Terms Agreed:', termsChecked);
+  
+    alert('Registration Successful!');
+    document.getElementById("registrationForm").reset();
+  });
+  
+  document.getElementById("bgColor").addEventListener("input", function () {
+    document.getElementById("regBox").style.backgroundColor = this.value;
+  });
+  
