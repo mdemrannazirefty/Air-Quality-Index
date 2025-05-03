@@ -13,57 +13,58 @@
     <img src="images/Logo.jpg" alt="Logo" width="150px">
     <h1>Air Quality Index Application</h1>
   </div>
-
+  
   <div class="main-container">
     <div class="box-container">
 
       <div class="left-box">
-        <div class="box1">
-          <p>Box1</p>
-        </div>
-        <div class="box2">
-          <p>Box2</p>
-        </div>
+        <div class="box1"><p>Box1</p></div>
+        <div class="box2"><p>Box2</p></div>
       </div>
-
       <div class="right-box">
         <div id="regBox" class="registration-box">
           <h2>Registration</h2>
 
           <form id="registrationForm">
             <div class="form-row">
-              <label for="regFullname">Name :</label>
-              <input type="text" id="regFullname" name="fullname" placeholder="Full Name" />
+              <label for="regFullname">Name:</label>
+              <input type="text" id="regFullname" />
             </div>
+            <span class="error" id="nameError"></span>
 
             <div class="form-row">
-              <label for="regEmail">Your Email :</label>
-              <input type="email" id="regEmail" name="email" placeholder="Email" />
+              <label for="regEmail">Your Email:</label>
+              <input type="email" id="regEmail" />
             </div>
+            <span class="error" id="emailError"></span>
 
             <div class="form-row">
-              <label for="regPassword">Password :</label>
-              <input type="password" id="regPassword" name="password" placeholder="Password" />
+              <label for="regPassword">Password:</label>
+              <input type="password" id="regPassword" />
             </div>
+            <span class="error" id="passwordError"></span>
 
             <div class="form-row">
-              <label for="regcPassword">Confirm Password :</label>
-              <input type="password" id="regcPassword" name="confirmPassword" placeholder="Confirm Password" />
+              <label for="regcPassword">Confirm Password:</label>
+              <input type="password" id="regcPassword" />
             </div>
+            <span class="error" id="cPasswordError"></span>
 
             <div class="form-row">
-              <label for="Location">Enter Your Location :</label>
-              <input type="text" id="Location" name="location" placeholder="Enter Location" />
+              <label for="Location">Enter Your Location:</label>
+              <input type="text" id="Location" />
             </div>
+            <span class="error" id="locationError"></span>
 
             <div class="form-row">
               <label for="Zip">Enter Your Zip:</label>
-              <input type="text" id="Zip" name="zip" placeholder="Your Zip" />
+              <input type="text" id="Zip" />
             </div>
+            <span class="error" id="zipError"></span>
 
             <div class="form-row">
               <label for="LOPcity">Preferred City:</label>
-              <select name="LOPcity" id="LOPcity">
+              <select id="LOPcity">
                 <option value="">--Select City--</option>
                 <option value="Dhaka">Dhaka</option>
                 <option value="Khulna">Khulna</option>
@@ -71,29 +72,29 @@
                 <option value="Comilla">Comilla</option>
               </select>
             </div>
+            <span class="error" id="cityError"></span>
 
             <div class="form-row">
               <label for="bgColor">Choose BG Color:</label>
-              <input type="color" id="bgColor" name="bgColor" value="#f08080" />
+              <input type="color" id="bgColor" value="#f08080" />
             </div>
 
             <div class="form-row checkbox-row">
-              <input id="checkbox" type="checkbox" />
-              <label for="checkbox" class="checkbox-label">
-                I agree to these <a href="#">Terms and Conditions</a>.
+              <label class="checkbox-label">
+                <input type="checkbox" id="checkbox" />
+                I agree to these <a href="#">Terms</a>.
               </label>
             </div>
+            <span class="error" id="termsError"></span>
 
             <div class="form-row button-row">
               <button type="submit">Confirm</button>
             </div>
           </form>
         </div>
-
-        <div class="bottom-box"></div>
+          <div class="bottom-box"></div>
       </div>
-
-    </div>
+      </div>
   </div>
 </body>
 </html>

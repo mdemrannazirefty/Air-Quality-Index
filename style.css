@@ -1,121 +1,140 @@
 body {
-    text-align: center;
-    font-family: Arial, Helvetica, sans-serif;
-  }
-  
-  .Logo-text img {
-    margin-top: 20px;
-  }
-  
-  .Logo-text h1 {
-    color: rgb(55, 118, 181);
-  }
-  
-  .main-container {
-    display: flex;
-    justify-content: center;
-    margin-top: 20px;
-  }
-  
-  .box-container {
-    width: 850px;
-    height: 600px;
-    display: flex;
-    padding: 0 20px;
-  }
-  
-  .left-box {
-    width: 400px;
-    display: flex;
-    flex-direction: column;
-  }
-  
-  .box1, .box2 {
-    flex: 1;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-  }
-  
-  .box1 {
-    background-color: rgb(254, 186, 255);
-  }
-  
-  .box2 {
-    background-color: rgb(192, 231, 255);
-  }
-  
-  .right-box {
-    width: 400px;
-    display: flex;
-    flex-direction: column;
-  }
-  
-  .registration-box {
-    height: 400px;
-    background-color: rgb(226, 255, 140);
-    padding: 10px;
-  }
-  
-  .registration-box h2 {
-    color: black;
-    margin: 0;
-    text-align: center;
-  }
-  
-  #registrationForm {
-    text-align: left;
-    margin-top: 10px;
-  }
-  
-  .form-row {
-    display: flex;
-    align-items: center;
-    margin-bottom: 8px;
-  }
-  
-  .form-row label {
-    width: 150px;
-    font-weight: bold;
-    font-size: 14px;
-  }
-  
-  .form-row input,
-  .form-row select {
-    width: 180px;
-    padding: 4px 6px;
-    font-size: 14px;
-  }
-  
-  .checkbox-row {
-    display: flex;
-    align-items: center;
-  }
-  
-  .checkbox-label {
-    margin-left: 5px;
-    font-size: 13px;
-  }
-  
-  .button-row {
-    display: flex;
-    justify-content: center; 
-    margin-top: 10px;
-  }
-  
-  .button-row button {
-    background-color: rgb(254, 255, 255);
-    border: none;
-    padding: 8px 16px;
-    font-size: 16px;
-    border-radius: 5px;
-    cursor: pointer;
-  }
-  
-  .bottom-box {
-    flex: 1;
-    background-color: lightgoldenrodyellow;
-    padding: 10px;
-    overflow-y: auto;
-  }
-  
+  text-align: center;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+.Logo-text img {
+  margin-top: 20px;
+}
+
+.Logo-text h1 {
+  color: rgb(55, 118, 181);
+}
+
+.main-container {
+  display: flex;
+  justify-content: center;
+  margin-top: 20px;
+}
+
+.box-container {
+  width: 850px;
+  height: 650px;
+  display: flex;
+  padding: 0 20px;
+}
+
+.left-box {
+  width: 400px;
+  display: flex;
+  flex-direction: column;
+}
+
+.box1, .box2 {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.box1 {
+  background-color: rgb(254, 186, 255);
+}
+
+.box2 {
+  background-color: rgb(192, 231, 255);
+}
+
+.right-box {
+  width: 400px;
+  display: flex;
+  flex-direction: column;
+}
+
+.registration-box {
+  background-color: rgb(226, 255, 140);
+  padding: 10px;
+  height: 80%;
+  overflow-y: auto;
+}
+
+.registration-box h2 {
+  color: black;
+  margin: 0;
+  text-align: center;
+}
+
+#registrationForm {
+  text-align: left;
+  margin-top: 10px;
+}
+
+.form-row {
+  display: flex;
+  align-items: center;
+  margin-bottom: 8px;
+  gap: 10px;
+}
+
+.form-row label {
+  width: 150px;
+  font-weight: bold;
+  font-size: 14px;
+  text-align: right;
+}
+
+.form-row input,
+.form-row select {
+  flex: 1;
+  padding: 4px 6px;
+  font-size: 14px;
+}
+
+.checkbox-row {
+  display: flex;
+  justify-content: center;
+  margin-top: 10px;
+}
+
+.checkbox-label {
+  display: inline-flex;
+  align-items: center;
+  font-size: 13px;
+  gap: 6px;
+  white-space: nowrap;
+}
+
+.button-row {
+  display: flex;
+  justify-content: center;
+  margin-top: 10px;
+}
+
+.button-row button {
+  background-color: rgb(254, 255, 255);
+  border: none;
+  padding: 8px 16px;
+  font-size: 16px;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.bottom-box {
+  flex: 1;
+  background-color: rgb(255, 189, 189);
+  padding: 10px;
+  overflow-y: auto;
+}
+
+.error {
+  color: red;
+  font-size: 12px;
+  display: block;
+  margin-left: 160px;
+  margin-top: -6px;
+  margin-bottom: 6px;
+}
+
+.input-error {
+  border: 1px solid red;
+}
